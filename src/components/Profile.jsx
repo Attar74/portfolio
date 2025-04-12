@@ -206,7 +206,7 @@ const Profile = () => {
             </a>
           </p>
 
-          {false && (
+          {/* {false && (
             <div className="opacity-60">
               <p className="mb-2">Inactive on</p>
               <div className="flex flex-wrap gap-3">
@@ -227,7 +227,7 @@ const Profile = () => {
                 </span>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </>
