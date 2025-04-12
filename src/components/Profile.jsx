@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Avatar from '../assets/avatar.png';
+import VelentsLogo from '../assets/velents-logo.png';
+
 const Profile = () => {
   return (
     <>
@@ -24,11 +26,11 @@ const Profile = () => {
 
         <div className="space-y-2 mb-6">
           <p className="flex items-center gap-2">
-            Working at{' '}
-            <span className="flex items-center gap-1">
-              <span className="text-yellow-400">▲</span>{' '}
+            <strong>Working at </strong>
+            <span className="flex items-center gap-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+              <img src={VelentsLogo} alt="Velents Logo" className="w-4 h-4" />
               <a
-                className="hover:text-yellow-300 hover:underline hover:scale-105 transition-all duration-300"
+                className="hover:text-yellow-300 hover:underline"
                 href="https://velents.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -39,7 +41,7 @@ const Profile = () => {
           </p>
 
           <p className="flex items-center gap-2 flex-wrap">
-            Skilled in{' '}
+            <strong>Skilled in </strong>
             <span className="flex items-center gap-1">
               <span className="text-blue-500">⚛️</span> React
             </span>
@@ -55,7 +57,7 @@ const Profile = () => {
           </p>
 
           <p className="flex items-center gap-2 flex-wrap">
-            Education{' '}
+            <strong>Education </strong>
             <span className="flex items-center gap-1">
               <span className="text-orange-500">🎓</span> BSc. Computer Science,
               Benha University
@@ -66,7 +68,7 @@ const Profile = () => {
           </p>
 
           <p className="flex items-center gap-2 flex-wrap">
-            Services{' '}
+            <strong>Services </strong>
             <span className="flex items-center gap-1">
               <span className="text-blue-300">🎨</span> Web Design
             </span>
@@ -77,48 +79,64 @@ const Profile = () => {
         </div>
 
         <p className="mb-2">
-          With a solid foundation in Computer Science and continuous learning,
-          I'm passionate about creating exceptional web experiences. You can
-          find my{' '}
+          I'm a senior front-end developer with a BSc and a postgraduate diploma
+          in Computer Science, and over 5 years of experience crafting scalable,
+          accessible, and performance-optimized web applications. At{' '}
+          <span className="text-yellow-400">▲</span>{' '}
+          <a
+            className="text-yellow-300 hover:underline hover:scale-105 transition-all duration-300"
+            href="https://velents.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Velents
+          </a>
+          , I’ve contributed to AI-powered platforms using React, Nuxt, and
+          TypeScript. You can find my{' '}
           <Link
             to="https://www.linkedin.com/in/attar74"
             className="text-blue-400 underline hover:text-blue-300"
             target="_blank"
             rel="noopener noreferrer"
           >
-            projects here
+            featured projects here
           </Link>
-          , including AudioCloud - an audio platform for uploading and listening
-          to audio content.
+          , including <em>AudioCloud</em> — a platform for uploading and
+          streaming audio content.
         </p>
 
         <p className="mb-2">
-          I've completed numerous certifications in React development, including{' '}
-          <span className="text-blue-400">React Hooks</span>,{' '}
+          I’ve completed several certifications in front-end development,
+          including <span className="text-blue-400">React Hooks</span>,{' '}
           <span className="text-blue-400">React Accessibility</span>, and{' '}
           <span className="text-blue-400">
             React: Creating and Hosting a Full-Stack Site
           </span>
-          . Recently, I've also completed{' '}
-          <span className="text-blue-400">The Nuxt 3 Bootcamp</span>, enhancing
-          my Vue.js skills.
+          . I also recently completed the{' '}
+          <span className="text-blue-400">Nuxt 3 Bootcamp</span> to strengthen
+          my Vue.js expertise.
         </p>
 
         <p className="mb-2">
-          I'm proud to have been part of the team that won 2nd place in the{' '}
+          I'm proud to have earned 2nd place in the{' '}
           <span className="text-blue-400">Ideation Marathon Competition</span>{' '}
-          by the Ministry of Communications and Information Technology, which
-          led to an incubation phase at the Technology Innovation
-          Entrepreneurship Center.
+          by Egypt’s Ministry of Communications and Information Technology,
+          which led to an incubation phase at the Technology Innovation &
+          Entrepreneurship Center (TIEC).
         </p>
 
         <p className="mb-2">
-          I'm fluent in <span className="text-blue-400">Arabic</span> (native),{' '}
-          <span className="text-blue-400">English</span> (professional), and
-          have elementary proficiency in{' '}
-          <span className="text-blue-400">German</span>. If you're interested in
-          collaborating or just want to connect, feel free to{' '}
-          <Link to="/contact" className="text-blue-400 hover:text-blue-300">
+          I'm fluent in <span className="text-blue-400">Arabic</span> (native),
+          professionally proficient in{' '}
+          <span className="text-blue-400">English</span>, and possess basic
+          knowledge of <span className="text-blue-400">German</span>. If you're
+          interested in collaborating or just want to connect, feel free to{' '}
+          <Link
+            to="https://www.linkedin.com/in/attar74"
+            className="text-blue-400 hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             reach out
           </Link>
           .
@@ -167,6 +185,16 @@ const Profile = () => {
               LinkedIn
             </a>
           </div>
+
+          <p className="mb-4 opacity-80">
+            Whatsapp me at{' '}
+            <a
+              href="https://wa.me/31653209256"
+              className="underline hover:opacity-100"
+            >
+              +31653209256
+            </a>
+          </p>
 
           <p className="mb-4 opacity-80">
             Or mail me at{' '}
