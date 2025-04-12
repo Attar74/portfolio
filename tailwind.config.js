@@ -18,6 +18,24 @@ export default {
       animation: {
         shake: 'shake 0.5s ease-in-out infinite',
       },
+      boxShadow: {
+        glow: '0 0 15px rgba(255, 255, 255, 0.5)',
+        'blue-glow': '0 0 15px rgba(59, 130, 246, 0.6)',
+      },
+      utilities: {
+        '.perspective-500': {
+          perspective: '500px',
+        },
+        '.transform-style-3d': {
+          transformStyle: 'preserve-3d',
+        },
+        '.backface-hidden': {
+          backfaceVisibility: 'hidden',
+        },
+        '.rotate-y-180': {
+          transform: 'rotateY(180deg)',
+        },
+      },
     },
   },
   plugins: [],

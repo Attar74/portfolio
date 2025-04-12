@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Avatar from '../assets/avatar.png';
 import VelentsLogo from '../assets/velents-logo.png';
 
 const Profile = () => {
+  const [isFlipping, setIsFlipping] = useState(false);
+  const [hasInitialFlipCompleted, setHasInitialFlipCompleted] = useState(false);
+
+  useEffect(() => {
+    // Initial flip after a short delay
+    const initialFlipTimer = setTimeout(() => {
+      setIsFlipping(true);
+
+      // Reset after initial flip completes
+      setTimeout(() => {
+        setIsFlipping(false);
+        setHasInitialFlipCompleted(true); // Mark that initial flip is done
+      }, 1000); // Duration of flip animation
+    }, 2000); // Start the initial flip 2 seconds after component mounts
+
+    return () => clearTimeout(initialFlipTimer); // Clean up on unmount
+  }, []);
+
+  // Handle hover flip
+  const handleMouseEnter = () => {
+    if (hasInitialFlipCompleted) {
+      setIsFlipping(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (hasInitialFlipCompleted) {
+      setIsFlipping(false);
+    }
+  };
+
   return (
     <>
       <div className="bg-black text-white p-6 min-h-screen max-w-screen-md mx-auto my-[10rem]">
@@ -12,11 +43,32 @@ const Profile = () => {
         </div>
         <div className="flex items-center gap-4">
           <h1 className="text-4xl font-bold mb-6">Mahmod Attar</h1>
-          <img
-            src={Avatar}
-            alt="Avatar"
-            className="w-8 h-8 rounded-full mb-6"
-          />
+          <div
+            className="relative h-8 w-8 mb-6 perspective-500 cursor-pointer"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div
+              className={`relative w-full h-full transition-transform duration-1000 transform-style-3d ${
+                isFlipping ? 'rotate-y-180' : ''
+              }`}
+            >
+              {/* Front of coin (original avatar) */}
+              <img
+                src={Avatar}
+                alt="Avatar"
+                className="absolute w-full h-full rounded-full backface-hidden"
+              />
+
+              {/* Back of coin (flipped avatar) */}
+              <img
+                src={Avatar} // You could use a different image here
+                alt="Avatar"
+                className="absolute w-full h-full rounded-full backface-hidden rotate-y-180 shadow-glow"
+                style={{ filter: 'hue-rotate(180deg)' }} // Optional: apply a filter to differentiate the back
+              />
+            </div>
+          </div>
         </div>
 
         <p className="text-lg mb-6">
@@ -91,7 +143,7 @@ const Profile = () => {
           >
             Velents
           </a>
-          , I’ve contributed to AI-powered platforms using React, Nuxt, and
+          , I've contributed to AI-powered platforms using React, Nuxt, and
           TypeScript. You can find my{' '}
           <Link
             to="https://www.linkedin.com/in/attar74"
@@ -106,7 +158,7 @@ const Profile = () => {
         </p>
 
         <p className="mb-2">
-          I’ve completed several certifications in front-end development,
+          I've completed several certifications in front-end development,
           including <span className="text-blue-400">React Hooks</span>,{' '}
           <span className="text-blue-400">React Accessibility</span>, and{' '}
           <span className="text-blue-400">
@@ -120,7 +172,7 @@ const Profile = () => {
         <p className="mb-2">
           I'm proud to have earned 2nd place in the{' '}
           <span className="text-blue-400">Ideation Marathon Competition</span>{' '}
-          by Egypt’s Ministry of Communications and Information Technology,
+          by Egypt's Ministry of Communications and Information Technology,
           which led to an incubation phase at the Technology Innovation &
           Entrepreneurship Center (TIEC).
         </p>

@@ -34,3 +34,20 @@
 .shake-animation:hover {
   animation: shake 0.5s ease-in-out infinite;
 }
+
+/* Add these custom classes for the 3D flip effect */
+.perspective-500 {
+  perspective: 500px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
