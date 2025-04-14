@@ -1,5 +1,7 @@
+import CurrentFocus from '../components/CurrentFocus';
+
 function Projects() {
-  return <div>Projects</div>;
+  return <CurrentFocus />;
 }
 
 export default Projects;

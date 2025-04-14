@@ -38,9 +38,6 @@ const Profile = () => {
   return (
     <>
       <div className="bg-black text-white p-6 min-h-screen max-w-screen-md mx-auto my-[10rem]">
-        <div className="absolute top-10 right-[30%] lg:top-[15rem] lg:right-[10rem] bg-yellow-500 text-black px-3 py-1 rounded-full font-bold text-lg transform rotate-3 shadow-lg shake-animation transition-all duration-300 cursor-pointer">
-          Under Development
-        </div>
         <div className="flex items-center gap-4">
           <h1 className="text-4xl font-bold mb-6">Mahmod Attar</h1>
           <div
