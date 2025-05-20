@@ -4,11 +4,10 @@ import ProjectItem from './ProjectItem';
 
 const CurrentFocus = () => {
   // Get featured projects or first 3 projects
-  const featuredProjects =
-    projects.filter((project) => project.featured) || projects.slice(0, 3);
+  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <div className="py-12 px-12 lg:px-0">
+    <div className="py-12 px-12 xl:px-0 overflow-y-auto no-scrollbar">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
         <div>
           <h2 className="text-4xl font-bold text-white mb-2">Current Focus</h2>
@@ -37,7 +36,7 @@ const CurrentFocus = () => {
         </a>
       </div>
 
-      <div className="grid grid-cols-1  gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {featuredProjects.map((project) => (
           <ProjectItem key={project.id} project={project} />
         ))}

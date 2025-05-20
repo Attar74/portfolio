@@ -42,17 +42,67 @@ const Sidebar = () => {
       {/* Mobile menu button */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 left-4 z-50 p-2 rounded-md bg-gray-800 text-white md:hidden"
+        className="fixed top-4 left-4 z-50 p-2 rounded-md bg-gray-800 text-white lg:hidden cursor-pointer"
         aria-label="Toggle menu"
       >
-        {isOpen ? '✕' : '☰'}
+        {isOpen ? (
+          <svg
+            className="select-none outline-none"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="6"
+              y1="6"
+              x2="18"
+              y2="18"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <line
+              x1="6"
+              y1="18"
+              x2="18"
+              y2="6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="select-none outline-none"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect y="4" width="24" height="2" rx="1" fill="currentColor" />
+
+            <rect
+              x="0"
+              y="11"
+              width="18"
+              height="2"
+              rx="1"
+              fill="currentColor"
+            />
+
+            <rect y="18" width="24" height="2" rx="1" fill="currentColor" />
+          </svg>
+        )}
       </button>
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 z-40 h-full bg-transparent text-white transition-all duration-300 ease-in-out transform ${
-          isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
-        } md:w-64 w-64 shadow-xl`}
+        className={`fixed top-0 left-0 z-40 h-full bg-black text-white transition-all duration-300 ease-in-out transform ${
+          isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+        } lg:w-64 w-64 shadow-xl`}
       >
         <div className="flex flex-col h-full">
           {/* Sidebar header */}
@@ -67,7 +117,7 @@ const Sidebar = () => {
                 alt="Attar Logo"
                 className={`w-16 h-16 m-0 transition-opacity duration-1000 ${
                   isVisible ? 'opacity-100' : 'opacity-10'
-                }`}
+                } ${isOpen ? 'translate-x-30' : 'translate-x-0'}`}
               />
             </Link>
           </div>
@@ -105,7 +155,8 @@ const Sidebar = () => {
                 {projects.map((project) => (
                   <li key={project.id}>
                     <Link
-                      to={`/projects/${project.id}`}
+                      to={project.link}
+                      target="_blank"
                       className={`flex items-center p-2 rounded-md transition-colors hover:text-[#fff] ${
                         location.pathname === `/projects/${project.id}`
                           ? 'bg-blue-600 text-white'

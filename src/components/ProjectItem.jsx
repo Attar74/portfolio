@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProjectItem = ({ project }) => {
-  const { id, title, description, technologies, imageUrl, demoUrl } = project;
+  const { title, description, technologies, imageUrl, link } = project;
 
   return (
-    <div className="grid grid-cols-2 gap-6 bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+    <div className="grid grid-cols-2 gap-6 bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer">
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden">
         {imageUrl ? (
@@ -50,15 +50,15 @@ const ProjectItem = ({ project }) => {
         {/* Action buttons */}
         <div className="flex space-x-2">
           <Link
-            to={`/projects/${id}`}
+            to={link}
             className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-md text-sm font-medium transition-colors"
           >
             View Details
           </Link>
 
-          {demoUrl && (
+          {link && (
             <a
-              href={demoUrl}
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-white text-center py-2 px-4 rounded-md text-sm font-medium transition-colors"
