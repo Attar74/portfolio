@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ProjectItem = ({ project }) => {
   const { title, description, technologies, imageUrl, link } = project;
@@ -49,12 +48,12 @@ const ProjectItem = ({ project }) => {
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-          <Link
+          {/* <Link
             to={link}
             className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-md text-sm font-medium transition-colors"
           >
             View Details
-          </Link>
+          </Link> */}
 
           {link && (
             <a

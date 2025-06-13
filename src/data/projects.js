@@ -1,5 +1,26 @@
 const projects = [
   {
+    id: 5,
+    title: 'Ai Voice assistant',
+    description:
+      'A voice assistant that can be used to create and manage voice prompts',
+    technologies: ['Vue.js', 'Bootstrap', 'Vite'],
+    imageUrl: '/images/s2s.png',
+    githubUrl: null, // Private repository
+    featured: true,
+    link: 'https://agent.velents.ai/velents/s2s/',
+  },
+  {
+    id: 4,
+    title: 'Faltah',
+    description: 'A platform for applying to jobs',
+    technologies: ['Vue.js', 'Nuxt', 'Tailwind CSS', 'webpack'],
+    imageUrl: '/images/Faltah.png',
+    githubUrl: null, // Private repository
+    featured: true,
+    link: 'https://faltah.ai/apply',
+  },
+  {
     id: 2,
     title: 'Velents AI',
     description: 'AI-powered talent acquisition platform',
@@ -18,27 +39,6 @@ const projects = [
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://crm.velents.com/',
-  },
-  {
-    id: 4,
-    title: 'Faltah',
-    description: 'A platform for applying to jobs',
-    technologies: ['Vue.js', 'Nuxt', 'Tailwind CSS', 'webpack'],
-    imageUrl: '/images/Faltah.png',
-    githubUrl: null, // Private repository
-    featured: true,
-    link: 'https://faltah.ai/apply',
-  },
-  {
-    id: 5,
-    title: 'Ai Voice assistant',
-    description:
-      'A voice assistant that can be used to create and manage voice prompts',
-    technologies: ['Vue.js', 'Bootstrap', 'Vite'],
-    imageUrl: '/images/s2s.png',
-    githubUrl: null, // Private repository
-    featured: true,
-    link: 'https://agent.velents.ai/velents/s2s/',
   },
   {
     id: 6,
