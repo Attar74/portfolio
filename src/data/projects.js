@@ -1,3 +1,5 @@
+import HectarLogo from '../assets/hectar-logo.png';
+import VelentsLogo from '../assets/velents-logo.png';
 const projects = [
   {
     id: 5,
@@ -9,6 +11,8 @@ const projects = [
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://agent.velents.ai/velents/s2s/',
+    companyLink: 'https://www.linkedin.com/company/velents',
+    companyLogo: VelentsLogo,
   },
   {
     id: 4,
@@ -19,6 +23,8 @@ const projects = [
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://faltah.ai/apply',
+    companyLink: 'https://www.linkedin.com/company/faltah',
+    companyLogo: VelentsLogo,
   },
   {
     id: 2,
@@ -29,6 +35,8 @@ const projects = [
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://velents.ai/',
+    companyLink: 'https://www.linkedin.com/company/velents',
+    companyLogo: VelentsLogo,
   },
   {
     id: 3,
@@ -39,6 +47,8 @@ const projects = [
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://crm.velents.com/',
+    companyLink: 'https://www.linkedin.com/company/velents',
+    companyLogo: VelentsLogo,
   },
   {
     id: 6,
@@ -50,6 +60,8 @@ const projects = [
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://hectar.io/',
+    companyLink: 'https://www.linkedin.com/company/hectarapp',
+    companyLogo: HectarLogo,
   },
   {
     id: 7,
@@ -61,6 +73,8 @@ const projects = [
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://hectarplus.io/',
+    companyLink: 'https://www.linkedin.com/company/hectarapp',
+    companyLogo: HectarLogo,
   },
 ];
 

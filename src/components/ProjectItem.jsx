@@ -1,7 +1,15 @@
 import React from 'react';
 
 const ProjectItem = ({ project }) => {
-  const { title, description, technologies, imageUrl, link } = project;
+  const {
+    title,
+    description,
+    technologies,
+    imageUrl,
+    link,
+    companyLink,
+    companyLogo,
+  } = project;
 
   return (
     <div className="grid grid-cols-2 gap-6 bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer">
@@ -36,10 +44,15 @@ const ProjectItem = ({ project }) => {
             {title}
           </h3>
 
-          {/* Project logo/icon */}
-          <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
-            <span className="text-sm font-bold">{title.charAt(0)}</span>
-          </div>
+          <span className="flex items-center gap-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+            <a href={companyLink} target="_blank" rel="noopener noreferrer">
+              <img
+                src={companyLogo}
+                alt="Velents Logo"
+                className=" hover:scale-105 transition-all duration-300 w-8 h-8"
+              />
+            </a>
+          </span>
         </div>
 
         <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
