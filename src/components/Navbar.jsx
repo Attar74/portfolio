@@ -99,9 +99,9 @@ const Navbar = () => {
 
         <nav className="p-8 w-full flex justify-between items-center box-border gap-2">
           <div className="m-auto" />
-          <div className="bg-yellow-500 text-black px-3 py-1 rounded-full font-bold text-lg transform rotate-3 shadow-lg shake-animation transition-all duration-300 cursor-pointer">
+          {/*<div className="bg-yellow-500 text-black px-3 py-1 rounded-full font-bold text-lg transform rotate-3 shadow-lg shake-animation transition-all duration-300 cursor-pointer">
             Under Development
-          </div>
+          </div>*/}
           <div className="grid grid-flow-col gap-5 print:opacity-0">
             {/* 
             <Link

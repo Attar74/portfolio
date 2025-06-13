@@ -246,6 +246,18 @@ const Profile = () => {
           </p>
 
           <p className="mb-4 opacity-80">
+            Book a meeting with me at{' '}
+            <a
+              href="https://calendly.com/m-elattar-dev/30min"
+              className="underline hover:opacity-100"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Calendly
+            </a>
+          </p>
+
+          <p className="mb-4 opacity-80">
             Or mail me at{' '}
             <a
               href="mailto:m.elattar.dev@gmail.com"

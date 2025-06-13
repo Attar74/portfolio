@@ -35,7 +35,7 @@ const projects = [
     description:
       'A voice assistant that can be used to create and manage voice prompts',
     technologies: ['Vue.js', 'Bootstrap', 'Vite'],
-    //imageUrl: '/images/projects/ecommerce.jpg',
+    imageUrl: '/images/s2s.png',
     githubUrl: null, // Private repository
     featured: true,
     link: 'https://agent.velents.ai/velents/s2s/',

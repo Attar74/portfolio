@@ -14,7 +14,7 @@ const CurrentFocus = () => {
           <div className="w-16 h-1 bg-blue-600"></div>
         </div>
 
-        <a
+        {/* <a
           href="/projects"
           className="mt-4 md:mt-0 text-gray-300 hover:text-[#fff] flex items-center group"
         >
@@ -33,12 +33,18 @@ const CurrentFocus = () => {
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </a>
+        </a> */}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
         {featuredProjects.map((project) => (
-          <ProjectItem key={project.id} project={project} />
+          <React.Fragment key={project.id}>
+            <div className="hidden md:block md:col-span-2"></div>
+            <div className="col-span-1 md:col-span-3">
+              <ProjectItem project={project} />
+            </div>
+            <div className="hidden md:block md:col-span-2"></div>
+          </React.Fragment>
         ))}
       </div>
     </div>

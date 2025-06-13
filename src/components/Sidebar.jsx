@@ -100,8 +100,10 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 z-40 h-full bg-black text-white transition-all duration-300 ease-in-out transform ${
-          isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+        className={`fixed top-0 left-0 z-40 h-full  text-white transition-all duration-300 ease-in-out transform ${
+          isOpen
+            ? 'translate-x-0 bg-black'
+            : '-translate-x-full lg:translate-x-0 bg-transparent'
         } lg:w-64 w-64 shadow-xl`}
       >
         <div className="flex flex-col h-full">
@@ -149,7 +151,7 @@ const Sidebar = () => {
             {/* Projects Section */}
             <div className="mt-6">
               <h3 className="px-2 mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                <a href="/projects">Projects</a>
+                <a href="#">Projects</a>
               </h3>
               <ul className="space-y-1">
                 {projects.map((project) => (
