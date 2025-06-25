@@ -44,15 +44,17 @@ const ProjectItem = ({ project }) => {
             {title}
           </h3>
 
-          <span className="flex items-center gap-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-            <a href={companyLink} target="_blank" rel="noopener noreferrer">
-              <img
-                src={companyLogo}
-                alt="Velents Logo"
-                className=" hover:scale-105 transition-all duration-300 w-8 h-8"
-              />
-            </a>
-          </span>
+          {companyLink && (
+            <span className="flex items-center gap-1 hover:scale-105 transition-all duration-300 cursor-pointer">
+              <a href={companyLink} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={companyLogo}
+                  alt="Velents Logo"
+                  className=" hover:scale-105 transition-all duration-300 w-8 h-8"
+                />
+              </a>
+            </span>
+          )}
         </div>
 
         <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">

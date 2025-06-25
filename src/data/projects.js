@@ -2,6 +2,19 @@ import HectarLogo from '../assets/hectar-logo.png';
 import VelentsLogo from '../assets/velents-logo.png';
 const projects = [
   {
+    id: 1,
+    title: 'Next.js Blog App',
+    description:
+      'A modern blog application built with Next.js featuring dynamic routing, server-side rendering, and a clean responsive design',
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'typescript'],
+    imageUrl: '/images/next-blog-app.png',
+    githubUrl: null,
+    featured: true,
+    link: 'https://next-blog-app-seven-teal.vercel.app/',
+    companyLink: null,
+    companyLogo: null,
+  },
+  {
     id: 5,
     title: 'Ai Voice assistant',
     description:
