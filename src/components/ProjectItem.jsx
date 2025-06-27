@@ -47,7 +47,7 @@ const ProjectItem = ({ project }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer">
       {/* Project Image */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative  overflow-hidden">
         {imageUrl ? (
           <img
             src={imageUrl}
@@ -95,9 +95,10 @@ const ProjectItem = ({ project }) => {
         </p>
 
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-          {technologies && technologies.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {technologies.map((tech) => (
+          <div className="flex flex-wrap gap-2">
+            {technologies &&
+              technologies.length > 0 &&
+              technologies.map((tech) => (
                 <span
                   key={tech}
                   className="flex items-center gap-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white text-xs px-2 py-1 rounded-full"
@@ -105,8 +106,7 @@ const ProjectItem = ({ project }) => {
                   {getIcon(tech)} {tech}
                 </span>
               ))}
-            </div>
-          )}
+          </div>
         </div>
 
         {/* Action buttons */}
