@@ -157,8 +157,7 @@ const Sidebar = () => {
                 {projects.map((project) => (
                   <li key={project.id}>
                     <Link
-                      to={project.link}
-                      target="_blank"
+                      to={`/projects/${project.id}`}
                       className={`flex items-center p-2 rounded-md transition-colors hover:text-[#fff] ${
                         location.pathname === `/projects/${project.id}`
                           ? 'bg-blue-600 text-white'

@@ -2,7 +2,7 @@ import HectarLogo from '../assets/hectar-logo.png';
 import VelentsLogo from '../assets/velents-logo.png';
 const projects = [
   {
-    id: 1,
+    id: 'next-blog-2024',
     title: 'Next.js Blog App',
     description:
       'A modern blog application built with Next.js featuring dynamic routing, server-side rendering, and a clean responsive design',
@@ -15,11 +15,17 @@ const projects = [
     companyLogo: null,
   },
   {
-    id: 5,
+    id: 'velents-voice-ai',
     title: 'Ai Voice assistant',
     description:
-      'A voice assistant that can be used to create and manage voice prompts',
-    technologies: ['Vue.js', 'Bootstrap', 'Vite'],
+      'A cutting-edge AI-powered Store-to-Shopper (S2S) automation platform tailored for Shopify and Salla merchants. I built the interactive dashboard enabling businesses to initiate automated voice and WhatsApp follow-ups right after a purchase. The system confirms orders, collects customer feedback, and displays insights in real-time.',
+    technologies: [
+      'Vue.js',
+      'Pinia',
+      'Tailwind CSS',
+      'WebSockets',
+      'REST APIs',
+    ],
     imageUrl: '/images/s2s.png',
     githubUrl: null,
     featured: true,
@@ -28,9 +34,10 @@ const projects = [
     companyLogo: VelentsLogo,
   },
   {
-    id: 4,
+    id: 'faltah-jobs',
     title: 'Faltah',
-    description: 'A platform for applying to jobs',
+    description:
+      'Faltah.ai is an AI-driven mock interview simulator and evaluator. Users can conduct interviews, receive instant feedback on personality traits, competency alignment, and CV optimization.',
     technologies: ['Vue.js', 'Nuxt', 'Tailwind CSS', 'webpack'],
     imageUrl: '/images/Faltah.png',
     githubUrl: null,
@@ -40,10 +47,15 @@ const projects = [
     companyLogo: VelentsLogo,
   },
   {
-    id: 2,
+    id: 'velents-talent-ai',
     title: 'Velents AI',
     description: 'AI-powered talent acquisition platform',
-    technologies: ['Vue.js', 'Nuxt', 'Tailwind CSS', 'webpack'],
+    technologies: [
+      'WordPress',
+      'Leadfeeder',
+      'Microsoft Clarity',
+      'Google Tag Manager',
+    ],
     imageUrl: '/images/velentsAI.png',
     githubUrl: null,
     featured: true,
@@ -52,10 +64,11 @@ const projects = [
     companyLogo: VelentsLogo,
   },
   {
-    id: 3,
+    id: 'velents-crm-sales',
     title: 'Velents CRM',
-    description: 'A CRM for managing customer relationships and sales',
-    technologies: ['Vue.js', 'Nuxt', 'Tailwind CSS', 'webpack'],
+    description:
+      'Developed and maintained a full-featured ATS used by HR teams to streamline hiring pipelines. The platform supports candidate management, resume screening, automated evaluations, and collaborative decision-making.',
+    technologies: ['Vue.js', 'Vuex', 'TypeScript', 'Tailwind CSS', 'REST APIs'],
     imageUrl: '/images/ATS.png',
     githubUrl: null,
     featured: true,
@@ -64,7 +77,7 @@ const projects = [
     companyLogo: VelentsLogo,
   },
   {
-    id: 6,
+    id: 'hectar-real-estate',
     title: 'Hecater',
     description:
       'Search, sell, and rent. Start now — there are plenty of great options waiting for you.',
@@ -77,7 +90,7 @@ const projects = [
     companyLogo: HectarLogo,
   },
   {
-    id: 7,
+    id: 'hectar-plus-sa',
     title: 'Hecater Plus',
     description:
       'HectarPlus.io is a comprehensive digital platform designed to streamline real estate operations, particularly in the Saudi Arabian market.',

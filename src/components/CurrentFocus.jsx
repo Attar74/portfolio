@@ -40,7 +40,7 @@ const CurrentFocus = () => {
         {featuredProjects.map((project) => (
           <React.Fragment key={project.id}>
             <div className="hidden md:block md:col-span-2"></div>
-            <div className="col-span-1 md:col-span-3">
+            <div className="col-span-1 md:col-span-4">
               <ProjectItem project={project} />
             </div>
             <div className="hidden md:block md:col-span-2"></div>

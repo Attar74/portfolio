@@ -1,13 +1,10 @@
 import React from 'react';
-import { FaBootstrap, FaJs, FaReact, FaVuejs } from 'react-icons/fa';
-import {
-  SiNextdotjs,
-  SiNuxtdotjs,
-  SiTailwindcss,
-  SiTypescript,
-} from 'react-icons/si';
+import { Link } from 'react-router-dom';
+import { useIcons } from '../hooks/useIcons.jsx';
 
 const ProjectItem = ({ project }) => {
+  const { getIcon } = useIcons();
+
   const {
     title,
     description,
@@ -16,33 +13,8 @@ const ProjectItem = ({ project }) => {
     link,
     companyLink,
     companyLogo,
+    id,
   } = project;
-
-  const getIcon = (tech) => {
-    switch (tech.toLowerCase()) {
-      case 'next.js':
-        return <SiNextdotjs />;
-      case 'react':
-        return <FaReact />;
-      case 'tailwind css':
-        return <SiTailwindcss />;
-      case 'javascript':
-        return <FaJs />;
-      case 'typescript':
-        return <SiTypescript />;
-      case 'vuex':
-      case 'vue.js':
-        return <FaVuejs />;
-      case 'bootstrap':
-        return <FaBootstrap />;
-      case 'nuxt':
-        return <SiNuxtdotjs />;
-      case 'webpack':
-        return <FaReact />;
-      default:
-        return null;
-    }
-  };
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer">
@@ -110,13 +82,13 @@ const ProjectItem = ({ project }) => {
         </div>
 
         {/* Action buttons */}
-        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-          {/* <Link
-            to={link}
+        <div className="flex flex-col space-y-2">
+          <Link
+            to={`/projects/${id}`}
             className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-md text-sm font-medium transition-colors"
           >
             View Details
-          </Link> */}
+          </Link>
 
           {link && (
             <a
