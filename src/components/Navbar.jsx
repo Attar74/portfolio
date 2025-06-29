@@ -133,17 +133,19 @@ const Navbar = () => {
               </svg>
             </Link>*/}
 
-            <Link
-              to="/projects"
-              title="Projects"
-              className={`font-bold cursor-pointer no-underline text-inherit transition-opacity duration-200 outline-none m-auto ${
-                location.pathname === `/projects`
-                  ? 'text-[#fff]'
-                  : 'opacity-60 hover:opacity-100 '
-              }`}
-            >
-              <span className="md:inline">Projects</span>
-            </Link>
+            {location.pathname !== '/projects' && (
+              <Link
+                to="/projects"
+                title="Projects"
+                className={`font-bold cursor-pointer no-underline text-inherit transition-opacity duration-200 outline-none m-auto ${
+                  location.pathname === `/projects`
+                    ? 'text-[#fff]'
+                    : 'opacity-60 hover:opacity-100 '
+                }`}
+              >
+                <span className="md:inline">Projects</span>
+              </Link>
+            )}
 
             {/*<Link
               to="/talks"
