@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Avatar from '../assets/avatar.png';
 import VelentsLogo from '../assets/velents-logo.png';
+import { useIcons } from '../hooks/useIcons.jsx';
 
 const Profile = () => {
   const [isFlipping, setIsFlipping] = useState(false);
   const [hasInitialFlipCompleted, setHasInitialFlipCompleted] = useState(false);
-
+  const { getIcon } = useIcons();
   useEffect(() => {
     // Initial flip after a short delay
     const initialFlipTimer = setTimeout(() => {
@@ -37,7 +38,7 @@ const Profile = () => {
 
   return (
     <>
-      <div className="bg-black text-white p-6 min-h-screen max-w-screen-md mx-auto my-[10rem]">
+      <div className="bg-black text-white p-6 min-h-screen max-w-screen-md mx-auto mt-[20rem] mb-[10rem]">
         <div className="flex items-center gap-4">
           <h1 className="text-4xl font-bold mb-6">Mahmod Attar</h1>
           <div
@@ -69,7 +70,7 @@ const Profile = () => {
         </div>
 
         <p className="text-lg mb-6">
-          I’m Mahmod Attar — a passionate Software Engineer based in Cairo,
+          I'm Mahmod Attar — a passionate Software Engineer based in Cairo,
           Egypt, with strong expertise in front-end development using Vue.js and
           React. I specialize in building responsive, modern user interfaces and
           have 5+ years of experience crafting scalable, maintainable front-end
@@ -97,67 +98,80 @@ const Profile = () => {
           <p className="flex items-center gap-2 flex-wrap">
             <strong>Skilled in </strong>
             <span className="flex items-center gap-1">
-              <span className="text-blue-500">⚛️</span> React
+              <span className="text-blue-500">{getIcon('React')}</span> React
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-green-500">V</span> Vue.js
+              <span className="text-blue-500">{getIcon('Next.js')}</span>{' '}
+              Next.js
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-green-400">▲</span> Nuxt
+              <span className="text-green-500">{getIcon('vue')}</span> Vue.js
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-blue-400">🌐</span> JavaScript
+              <span className="text-green-400">{getIcon('Nuxt')}</span> Nuxt
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-blue-400">{getIcon('JavaScript')}</span>{' '}
+              JavaScript
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-blue-400">{getIcon('TypeScript')}</span>{' '}
+              TypeScript
             </span>
           </p>
 
           <p className="flex items-center gap-2 flex-wrap">
             <strong>Education </strong>
             <span className="flex items-center gap-1">
-              <span className="text-orange-500">🎓</span> BSc. Computer Science,
-              Benha University
+              <span className="text-orange-500">{getIcon('bsc')}</span> BSc.
+              Computer Science, Benha University
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-purple-400">📚</span> MEARN Stack, ITI
+              <span className="text-purple-400">{getIcon('books')}</span> MEARN
+              Stack, ITI
             </span>
           </p>
 
           <p className="flex items-center gap-2 flex-wrap">
             <strong>Services </strong>
             <span className="flex items-center gap-1">
-              <span className="text-blue-300">🎨</span> Web Design
+              <span className="text-blue-300">{getIcon('design')}</span> Web
+              Design
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-yellow-400">💻</span> Web Development
+              <span className="text-yellow-400">{getIcon('development')}</span>{' '}
+              Web Development
             </span>
           </p>
         </div>
 
-        <p className="mb-2">
-          I'm a senior front-end developer with a BSc and a postgraduate diploma
-          in Computer Science, and over 5 years of experience crafting scalable,
-          accessible, and performance-optimized web applications. At{' '}
-          <span className="text-yellow-400">▲</span>{' '}
-          <a
-            className="text-yellow-300 hover:underline hover:scale-105 transition-all duration-300"
-            href="https://velents.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Velents
-          </a>
-          , I've contributed to AI-powered platforms using React, Nuxt, and
-          TypeScript. You can find my{' '}
-          <Link
-            to="https://www.linkedin.com/in/attar74"
-            className="text-blue-400 underline hover:text-blue-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            featured projects here
-          </Link>
-          , including <em>AudioCloud</em> — a platform for uploading and
-          streaming audio content.
-        </p>
+        <div className="mb-2">
+          <p className="text-wrap">
+            I'm a senior front-end developer with a BSc and a postgraduate
+            diploma in Computer Science, and over 5 years of experience crafting
+            scalable, accessible, and performance-optimized web applications. At{' '}
+            <Link
+              className="text-yellow-300 hover:underline hover:scale-105 transition-all duration-300"
+              href="https://velents.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Velents,
+            </Link>{' '}
+            I've contributed to AI-powered platforms using React, Nuxt, Next.js,
+            and TypeScript. You can find my{' '}
+            <Link
+              to="/projects"
+              className="text-blue-400 underline hover:text-blue-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              featured projects here
+            </Link>
+            , including <em>AudioCloud</em> — a platform for uploading and
+            streaming audio content.
+          </p>
+        </div>
 
         <p className="mb-2">
           I've completed several certifications in front-end development,
@@ -195,7 +209,7 @@ const Profile = () => {
           </Link>
           .
         </p>
-        <div className="bg-black text-white mt-[5rem]">
+        <div className="bg-black text-white my-[5rem]">
           <h2 className="text-xl font-medium mb-4">Find me on</h2>
 
           <div className="flex flex-wrap gap-3 mb-6">

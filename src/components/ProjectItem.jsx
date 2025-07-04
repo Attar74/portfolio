@@ -37,7 +37,7 @@ const ProjectItem = ({ project }) => {
         {/* Technology badge - show first technology */}
         {technologies && technologies.length > 0 && (
           <div className="absolute top-3 left-3 bg-black bg-opacity-70 text-white text-xs font-medium px-2 py-1 rounded">
-            {technologies[0]}
+            {technologies[0].title}
           </div>
         )}
       </div>

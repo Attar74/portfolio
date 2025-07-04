@@ -1,9 +1,13 @@
 import { useMemo } from 'react';
 import {
+  FaBook,
   FaBootstrap,
   FaDatabase,
+  FaGraduationCap,
   FaJs,
+  FaLaptop,
   FaMicrosoft,
+  FaPalette,
   FaReact,
   FaServer,
   FaVuejs,
@@ -34,6 +38,7 @@ export const useIcons = () => {
           return <SiTypescript />;
         case 'vuex':
         case 'vue.js':
+        case 'vue':
           return <FaVuejs />;
         case 'bootstrap':
           return <FaBootstrap />;
@@ -61,6 +66,23 @@ export const useIcons = () => {
         case 'microsoft clarity':
         case 'clarity':
           return <FaMicrosoft />;
+        case 'bsc':
+        case 'bachelor':
+        case 'degree':
+          return <FaGraduationCap />;
+        case 'books':
+        case 'book':
+        case 'reading':
+          return <FaBook />;
+        case 'laptop':
+        case 'computer':
+        case 'development':
+          return <FaLaptop />;
+        case 'design':
+        case 'ui/ux':
+        case 'ui':
+        case 'ux':
+          return <FaPalette />;
         default:
           return null;
       }

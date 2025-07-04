@@ -78,7 +78,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="z-40 relative max-w-screen-xl mx-auto">
+      <header className="z-40 fixed top-0 left-0 right-0 max-w-screen-xl mx-auto bg-black">
         {/*<Link
           className="w-12 h-12 absolute top-6 left-6 select-none outline-none"
           to="/"
@@ -133,19 +133,29 @@ const Navbar = () => {
               </svg>
             </Link>*/}
 
-            {location.pathname !== '/projects' && (
-              <Link
-                to="/projects"
-                title="Projects"
-                className={`font-bold cursor-pointer no-underline text-inherit transition-opacity duration-200 outline-none m-auto ${
-                  location.pathname === `/projects`
-                    ? 'text-[#fff]'
-                    : 'opacity-60 hover:opacity-100 '
-                }`}
-              >
-                <span className="md:inline">Projects</span>
-              </Link>
-            )}
+            <Link
+              to="/"
+              title="Home"
+              className={`font-bold cursor-pointer no-underline text-inherit transition-opacity duration-200 outline-none m-auto ${
+                location.pathname === `/`
+                  ? 'text-[#fff] opacity-100'
+                  : 'opacity-60 hover:opacity-100'
+              }`}
+            >
+              <span className="md:inline">Home</span>
+            </Link>
+
+            <Link
+              to="/projects"
+              title="Projects"
+              className={`font-bold cursor-pointer no-underline text-inherit transition-opacity duration-200 outline-none m-auto ${
+                location.pathname === `/projects`
+                  ? 'text-[#fff] opacity-100'
+                  : 'opacity-60 hover:opacity-100'
+              }`}
+            >
+              <span className="md:inline">Projects</span>
+            </Link>
 
             {/*<Link
               to="/talks"

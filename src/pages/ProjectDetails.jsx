@@ -39,9 +39,9 @@ const ProjectDetails = () => {
   } = project;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 rounded-xl">
       {/* Header Section */}
-      <div className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700">
+      <div className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 rounded-t-xl">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <Link
             to="/projects"
@@ -55,9 +55,9 @@ const ProjectDetails = () => {
 
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Hero Image Section */}
-        <div className="mb-12">
+        <div className="mb-12 px-5 cursor-pointer">
           {imageUrl ? (
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
               <img
                 src={imageUrl}
                 alt={title}
@@ -125,12 +125,13 @@ const ProjectDetails = () => {
                   technologies.map((tech) => (
                     <div
                       key={tech}
-                      className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                      className={`flex items-center gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-900/30 transition-all duration-300 transform hover:scale-110
+                      cursor-pointer group`}
                     >
-                      <span className="text-xl text-gray-600 dark:text-gray-300">
+                      <span className="text-xl text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                         {getIcon(tech)}
                       </span>
-                      <span className="font-medium text-gray-800 dark:text-white">
+                      <span className="font-medium text-gray-800 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
                         {tech}
                       </span>
                     </div>
