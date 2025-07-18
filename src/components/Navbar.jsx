@@ -224,7 +224,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"
-              className="cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
+              className="hidden md:inline cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +242,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
-              className="cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
+              className="hidden md:inline cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +260,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Whatsapp"
-              className="cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
+              className="hidden md:inline cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +278,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Book a meeting"
-              className="cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
+              className="hidden md:inline cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
