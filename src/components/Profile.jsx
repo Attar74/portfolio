@@ -169,7 +169,6 @@ const Profile = () => {
             <Link
               to="/projects"
               className="text-blue-400 underline hover:text-blue-300"
-              target="_blank"
               rel="noopener noreferrer"
             >
               featured projects here
@@ -203,7 +202,7 @@ const Profile = () => {
           I'm fluent in <span className="text-blue-400">Arabic</span> (native),
           professionally proficient in{' '}
           <span className="text-blue-400">English</span>, and possess basic
-          knowledge of <span className="text-blue-400">German</span>. If you're
+          knowledge of <span className="text-blue-400">Spanish</span>. If you're
           interested in collaborating or just want to connect, feel free to{' '}
           <Link
             to="https://www.linkedin.com/in/attar74"
