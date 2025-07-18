@@ -1,5 +1,7 @@
 import HectarLogo from '../assets/hectar-logo.png';
 import VelentsLogo from '../assets/velents-logo.png';
+import AvaLogo from '../assets/avatar.png';
+
 const projects = [
   {
     id: 'next-blog-2024',
@@ -11,8 +13,8 @@ const projects = [
     githubUrl: null,
     featured: true,
     link: 'https://next-blog-app-seven-teal.vercel.app/',
-    companyLink: null,
-    companyLogo: null,
+    companyLink: 'https://www.linkedin.com/in/attar74',
+    companyLogo: AvaLogo,
   },
   {
     id: 'velents-voice-ai',

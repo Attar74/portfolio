@@ -111,7 +111,7 @@ const Profile = () => {
               <span className="text-green-400">{getIcon('Nuxt')}</span> Nuxt
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-blue-400">{getIcon('JavaScript')}</span>{' '}
+              <span className="text-yellow-400">{getIcon('JavaScript')}</span>{' '}
               JavaScript
             </span>
             <span className="flex items-center gap-1">

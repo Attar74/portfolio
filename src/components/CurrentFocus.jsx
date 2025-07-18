@@ -1,6 +1,6 @@
 import React from 'react';
 import projects from '../data/projects';
-import ProjectItem from './ProjectItem';
+import NewProjectItem from './NewProjectItem';
 
 const CurrentFocus = () => {
   // Get featured projects or first 3 projects
@@ -9,8 +9,8 @@ const CurrentFocus = () => {
   return (
     <div className="py-12 px-12 xl:px-0 overflow-y-auto no-scrollbar">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
-        <div>
-          <h2 className="text-4xl font-bold text-white mb-2">Current Focus</h2>
+        <div className="my-10">
+          <h2 className="text-4xl font-bold text-white">Current Focus</h2>
           <div className="w-16 h-1 bg-blue-600"></div>
         </div>
 
@@ -41,7 +41,7 @@ const CurrentFocus = () => {
           <React.Fragment key={project.id}>
             <div className="hidden md:block md:col-span-2"></div>
             <div className="col-span-1 md:col-span-4">
-              <ProjectItem project={project} />
+              <NewProjectItem project={project} />
             </div>
             <div className="hidden md:block md:col-span-2"></div>
           </React.Fragment>
