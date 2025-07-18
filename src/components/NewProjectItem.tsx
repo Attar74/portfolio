@@ -46,7 +46,9 @@ const ProjectItem = ({ project }) => {
             <div className="flex flex-col justify-end gap-4 h-full md:h-3/4">
               {/* Header */}
               <div className="flex justify-between items-start">
-                <h3 className="text-lg font-bold text-white">{title}</h3>
+                <h3 className="text-lg font-bold text-white bg-black/25 p-2 rounded-md">
+                  {title}
+                </h3>
 
                 {companyLink && (
                   <span className="flex items-center gap-1 hover:scale-105 transition-all duration-300 cursor-pointer rounded-full bg-black/25 p-2">
@@ -67,7 +69,7 @@ const ProjectItem = ({ project }) => {
               </div>
 
               {/* Description */}
-              <p className="text-gray-200 text-sm  text-truncate bg-black/20 p-2 rounded-md">
+              <p className="text-gray-200 text-sm  text-truncate bg-black/25 p-2 rounded-md">
                 {description}
               </p>
 
