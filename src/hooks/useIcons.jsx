@@ -7,6 +7,7 @@ import {
   FaJs,
   FaLaptop,
   FaMicrosoft,
+  FaNode,
   FaPalette,
   FaReact,
   FaServer,
@@ -83,6 +84,11 @@ export const useIcons = () => {
         case 'ui':
         case 'ux':
           return <FaPalette />;
+        case 'mongodb':
+          return <FaDatabase />;
+        case 'node.js':
+        case 'nodejs':
+          return <FaNode />;
         default:
           return null;
       }

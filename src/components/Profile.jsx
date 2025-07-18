@@ -118,6 +118,12 @@ const Profile = () => {
               <span className="text-blue-400">{getIcon('TypeScript')}</span>{' '}
               TypeScript
             </span>
+            <span className="flex items-center gap-1">
+              <span className="text-red-400">{getIcon('Node.js')}</span> Node.js
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-red-400">{getIcon('MongoDB')}</span> MongoDB
+            </span>
           </p>
 
           <p className="flex items-center gap-2 flex-wrap">
