@@ -67,7 +67,7 @@ const ProjectItem = ({ project }) => {
               </div>
 
               {/* Description */}
-              <p className="text-gray-200 text-sm line-clamp-2">
+              <p className="text-gray-200 text-sm  text-truncate bg-black/20 p-2 rounded-md">
                 {description}
               </p>
 
