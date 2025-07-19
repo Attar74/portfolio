@@ -38,7 +38,7 @@ const Profile = () => {
 
   return (
     <>
-      <div className="bg-black text-white p-6 min-h-screen max-w-screen-md mx-auto mt-[20rem] mb-[10rem]">
+      <div className="bg-transparent text-white p-6 min-h-screen max-w-screen-md mx-auto mt-[20rem] mb-[10rem]">
         <div className="flex items-center gap-4">
           <h1 className="text-4xl font-bold mb-6">Mahmod Attar</h1>
           <div

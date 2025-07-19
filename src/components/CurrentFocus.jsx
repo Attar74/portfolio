@@ -36,14 +36,14 @@ const CurrentFocus = () => {
         </a> */}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
         {featuredProjects.map((project) => (
           <React.Fragment key={project.id}>
-            <div className="hidden md:block md:col-span-2"></div>
-            <div className="col-span-1 md:col-span-4">
+            <div className="hidden lg:block lg:col-span-2"></div>
+            <div className="col-span-1 lg:col-span-4">
               <NewProjectItem project={project} />
             </div>
-            <div className="hidden md:block md:col-span-2"></div>
+            <div className="hidden lg:block lg:col-span-2"></div>
           </React.Fragment>
         ))}
       </div>

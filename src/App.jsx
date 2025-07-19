@@ -6,7 +6,12 @@ import ProjectDetails from './pages/ProjectDetails';
 import Projects from './pages/Projects';
 function App() {
   return (
-    <div>
+    <div
+      className="min-h-screen bg-contain bg-center"
+      style={{
+        backgroundImage: "url('/src/assets/dark-bg.jpeg')",
+      }}
+    >
       <Navbar />
       <Sidebar />
       <main className="md:max-w-5xl mx-auto">

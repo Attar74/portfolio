@@ -78,7 +78,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="z-40 fixed top-0 left-0 right-0 max-w-screen-xl mx-auto bg-black">
+      <header className="z-40 fixed top-0 left-0 right-0 max-w-screen-xl mx-auto bg-black/50">
         {/*<Link
           className="w-12 h-12 absolute top-6 left-6 select-none outline-none"
           to="/"

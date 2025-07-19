@@ -42,7 +42,7 @@ const Sidebar = () => {
       {/* Mobile menu button */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 left-4 z-50 p-2 rounded-md bg-gray-800 text-white lg:hidden cursor-pointer"
+        className="fixed top-6 left-4 z-50 p-2 rounded-md  text-white lg:hidden cursor-pointer"
         aria-label="Toggle menu"
       >
         {isOpen ? (
@@ -75,9 +75,9 @@ const Sidebar = () => {
           </svg>
         ) : (
           <svg
-            className="select-none outline-none"
-            width="24"
-            height="24"
+            className="select-none outline-none group-hover:opacity-100 transition-opacity duration-200"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -100,9 +100,9 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 z-40 h-full  text-white transition-all duration-300 ease-in-out transform ${
+        className={`fixed top-0 left-0 z-40 h-full  text-white transition-all duration-300 ease-in-out transform border-r border-white/10 md:border-r-0 md:shadow-none ${
           isOpen
-            ? 'translate-x-0 bg-black'
+            ? 'translate-x-0 bg-black/80'
             : '-translate-x-full lg:translate-x-0 bg-transparent'
         } lg:w-64 w-64 shadow-xl`}
       >
@@ -125,11 +125,11 @@ const Sidebar = () => {
           </div>
 
           {/* Navigation */}
-          <nav className="flex-grow p-4 opacity-30 hover:opacity-60 transition-opacity duration-200 cursor-pointer">
+          <nav className="flex-grow px-8 py-2 opacity-30 hover:opacity-100 transition-opacity duration-200 cursor-pointer group">
             <svg
-              className="select-none outline-none"
-              width="24"
-              height="24"
+              className="select-none outline-none group-hover:opacity-100 transition-opacity duration-200"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ const Sidebar = () => {
             </svg>
 
             {/* Projects Section */}
-            <div className="mt-6">
+            <div className="mt-6 md:opacity-0 group-hover:opacity-60 transition-opacity duration-200">
               <h3 className="px-2 mb-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
                 <a href="#">Projects</a>
               </h3>
@@ -183,7 +183,7 @@ const Sidebar = () => {
       {/* Overlay for mobile */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
+          className="fixed inset-0 bg-black/50 z-30 md:hidden"
           onClick={() => setIsOpen(false)}
         ></div>
       )}

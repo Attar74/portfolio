@@ -39,7 +39,7 @@ const ProjectDetails = () => {
   } = project;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 rounded-xl">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 rounded-xl mt-[15rem] mx-5 lg:mx-0">
       {/* Header Section */}
       <div className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 rounded-t-xl">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -53,9 +53,9 @@ const ProjectDetails = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-3 lg:px-6 py-12">
         {/* Hero Image Section */}
-        <div className="mb-12 px-5 cursor-pointer">
+        <div className="mb-12 px-0 lg:px-5 cursor-pointer">
           {imageUrl ? (
             <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
               <img
