@@ -9,7 +9,7 @@ function App() {
     <div
       className="min-h-screen bg-contain bg-center"
       style={{
-        backgroundImage: "url('/src/assets/dark-bg.jpeg')",
+        backgroundImage: "url('/dark-bg.jpeg')",
       }}
     >
       <Navbar />
