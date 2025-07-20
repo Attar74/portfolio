@@ -1,6 +1,6 @@
+import AvaLogo from '../assets/avatar.png';
 import HectarLogo from '../assets/hectar-logo.png';
 import VelentsLogo from '../assets/velents-logo.png';
-import AvaLogo from '../assets/avatar.png';
 
 const projects = [
   {
@@ -103,6 +103,18 @@ const projects = [
     link: 'https://hectarplus.io/',
     companyLink: 'https://www.linkedin.com/company/hectarapp',
     companyLogo: HectarLogo,
+  },
+  {
+    id: 'memory-game',
+    title: 'Memory Game',
+    description: 'A simple memory game built with React and Tailwind CSS',
+    technologies: ['React', 'Tailwind CSS'],
+    imageUrl: '/images/memory-game.png',
+    githubUrl: null,
+    featured: true,
+    link: 'https://onwmemorygame.netlify.app/',
+    companyLink: 'https://www.linkedin.com/in/attar74',
+    companyLogo: AvaLogo,
   },
 ];
 
