@@ -70,13 +70,15 @@ const Profile = () => {
         </div>
 
         <p className="text-lg mb-6">
-          I'm Mahmod Attar — a passionate Software Engineer based in Cairo,
-          Egypt, with strong expertise in front-end development using Vue.js and
-          React. I specialize in building responsive, modern user interfaces and
-          have 5+ years of experience crafting scalable, maintainable front-end
-          architectures. I also have junior-level experience in backend
-          development, working with the MongoDB–Express.js stack to build APIs
-          and support full-stack applications.
+          I’m Mahmod Attar, a passionate Software Engineer currently based in
+          Barcelona, Spain. With more than five years of front-end experience, I
+          specialize in designing and building modern, responsive user
+          interfaces using Vue.js and React. My work focuses on crafting
+          scalable, maintainable front-end architectures and delivering
+          high-quality user experiences. In addition to front-end development, I
+          also have hands-on experience in back-end engineering, working with
+          the Node.js / Express.js / MongoDB stack to build APIs and support
+          full-stack applications.
         </p>
 
         <div className="space-y-2 mb-6">
