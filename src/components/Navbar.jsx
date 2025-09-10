@@ -291,6 +291,23 @@ const Navbar = () => {
               </svg>
             </a>
 
+            <a
+              href="https://europa.eu/europass/eportfolio/screen/share/7c4000de-fd0a-4c79-81c6-0fd3adf6333f?lang=en"
+              download="Attar_Elattar_CV.pdf"
+              title="preview CV"
+              className="hidden md:inline cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+              </svg>
+            </a>
+
             {/*
             <a
               href="/feed.xml"
