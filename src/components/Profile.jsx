@@ -272,7 +272,7 @@ const Profile = () => {
 
             <a
               href="https://europa.eu/europass/eportfolio/screen/share/7c4000de-fd0a-4c79-81c6-0fd3adf6333f?lang=en"
-              download="Attar_Elattar_CV.pdf"
+              target="_blank"
               title="preview CV"
               className="flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity"
             >
