@@ -89,6 +89,8 @@ export const useIcons = () => {
         case 'node.js':
         case 'nodejs':
           return <FaNode />;
+        case 'netherlands':
+          return <span className="text-lg">🇳🇱</span>;
         default:
           return null;
       }

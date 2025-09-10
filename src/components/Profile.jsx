@@ -71,14 +71,24 @@ const Profile = () => {
 
         <p className="text-lg mb-6">
           I’m Mahmod Attar, a passionate Software Engineer currently based in
-          Barcelona, Spain. With more than five years of front-end experience, I
-          specialize in designing and building modern, responsive user
-          interfaces using Vue.js and React. My work focuses on crafting
-          scalable, maintainable front-end architectures and delivering
-          high-quality user experiences. In addition to front-end development, I
-          also have hands-on experience in back-end engineering, working with
-          the Node.js / Express.js / MongoDB stack to build APIs and support
-          full-stack applications.
+          Nieuwegein, Utrecht, Netherlands {getIcon('netherlands')}. With a
+          solid Computer Science foundation from Benha University—reinforced by
+          specialized diplomas—I architect web experiences where performance
+          meets polish. Recently relocated, I bring fresh perspective and
+          adaptability to every project. As a Senior Front-End Developer at
+          Velents, I lead the delivery of high-impact features with Vue.js,
+          Nuxt.js, React, and Next.js, optimizing every byte for speed,
+          accessibility, and seamless mobile use. While my core expertise is
+          front end, I’m equally comfortable shifting to the server side. I
+          build and integrate Node.js + Express services, design efficient
+          RESTful APIs, and work with MongoDB (and PostgreSQL when needed) to
+          ensure data flows reliably and securely. This full-stack perspective
+          lets me craft components that are not only visually engaging but also
+          easy to extend, test, and maintain—future-proofing our codebase. By
+          collaborating closely with designers, product managers, and fellow
+          engineers, I push the boundaries of user-centred design, performance
+          budgets, and reusable architecture—making the web faster, more
+          intuitive, and ready for the next feature before it’s even imagined.
         </p>
 
         <div className="space-y-2 mb-6">
