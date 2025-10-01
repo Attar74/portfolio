@@ -1,8 +1,20 @@
 import AvaLogo from '../assets/avatar.png';
 import HectarLogo from '../assets/hectar-logo.png';
 import VelentsLogo from '../assets/velents-logo.png';
-
 const projects = [
+  {
+    id: 'agent-hub',
+    title: 'Agent Hub',
+    description:
+      'Agent Hub is a platform for creating and managing AI agents. It allows you to create, train, and deploy AI agents to your website.',
+    technologies: ['Next.js', 'React', 'Tailwind CSS', 'typescript'],
+    imageUrl: '/images/agent-hub.png',
+    githubUrl: null,
+    featured: true,
+    link: 'https://platform.agent.sa',
+    companyLink: 'https://www.linkedin.com/in/attar74',
+    companyLogo: VelentsLogo,
+  },
   {
     id: 'next-blog-2024',
     title: 'Next.js Blog App',
