@@ -292,7 +292,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href="https://europa.eu/europass/eportfolio/screen/share/7c4000de-fd0a-4c79-81c6-0fd3adf6333f?lang=en"
+              href="https://europa.eu/europass/eportfolio/screen/share/7b88c04d-2ec7-4f4e-8645-89fd4567e53e?lang=en"
               target="_blank"
               title="preview CV"
               className="hidden md:inline cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
