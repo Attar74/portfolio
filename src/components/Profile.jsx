@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Avatar from '../assets/avatar.png';
-import VelentsLogo from '../assets/velents-logo.png';
 import { useIcons } from '../hooks/useIcons.jsx';
 
 const Profile = () => {
@@ -38,71 +37,81 @@ const Profile = () => {
 
   return (
     <>
-      <div className="bg-transparent text-white p-6 min-h-screen max-w-screen-md mx-auto mt-[20rem] mb-[10rem]">
-        <div className="flex items-center gap-4">
-          <h1 className="text-4xl font-bold mb-6">Mahmod Attar</h1>
-          <div
-            className="relative h-8 w-8 mb-6 perspective-500 cursor-pointer"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
+      <div className="bg-black/20 text-white p-6 min-h-screen max-w-screen-md mx-auto mt-[20rem] mb-[10rem] flex flex-col space-y-[2rem]">
+        <div className="bg-black/20 max-w-screen-md mx-auto">
+          <div className="flex items-center gap-4">
+            <h1 className="text-4xl font-bold mb-6">Mahmod Attar</h1>
             <div
-              className={`relative w-full h-full transition-transform duration-1000 transform-style-3d ${
-                isFlipping ? 'rotate-y-180' : ''
-              }`}
+              className="relative h-8 w-8 mb-6 perspective-500 cursor-pointer"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
-              {/* Front of coin (original avatar) */}
-              <img
-                src={Avatar}
-                alt="Avatar"
-                className="absolute w-full h-full rounded-full backface-hidden"
-              />
+              <div
+                className={`relative w-full h-full transition-transform duration-1000 transform-style-3d ${
+                  isFlipping ? 'rotate-y-180' : ''
+                }`}
+              >
+                {/* Front of coin (original avatar) */}
+                <img
+                  src={Avatar}
+                  alt="Avatar"
+                  className="absolute w-full h-full rounded-full backface-hidden"
+                />
 
-              {/* Back of coin (flipped avatar) */}
-              <img
-                src={Avatar} // You could use a different image here
-                alt="Avatar"
-                className="absolute w-full h-full rounded-full backface-hidden rotate-y-180 shadow-glow"
-                style={{ filter: 'hue-rotate(180deg)' }} // Optional: apply a filter to differentiate the back
-              />
+                {/* Back of coin (flipped avatar) */}
+                <img
+                  src={Avatar} // You could use a different image here
+                  alt="Avatar"
+                  className="absolute w-full h-full rounded-full backface-hidden rotate-y-180 shadow-glow"
+                  style={{ filter: 'hue-rotate(180deg)' }} // Optional: apply a filter to differentiate the back
+                />
+              </div>
             </div>
           </div>
+          <p className="text-lg">
+            I'm Mahmod Attar, a passionate Software Engineer currently based in
+            Cairo, Egypt {getIcon('egypt')}. With a solid Computer Science
+            foundation from Benha University—reinforced by specialized
+            diplomas—I architect web experiences where performance meets polish.
+            As a Senior Front-End Developer at Netways, I work primarily with
+            enterprise clients, leading teams of developers to deliver
+            high-impact solutions. I specialize in React, Vue.js, Next.js, and
+            Nuxt.js, with extensive experience integrating these modern
+            front-end frameworks with .NET applications. My focus is on helping
+            development teams accelerate delivery times while maintaining
+            exceptional performance standards. I guide developers through best
+            practices, optimize workflows, and ensure seamless integration
+            between front-end and backend systems. While my core expertise is
+            front end, I've strengthened my backend skills significantly. I
+            build and integrate Nest.js services, design efficient RESTful APIs,
+            and work with PostgreSQL to ensure data flows reliably and securely.
+            I've also started working with Liferay, expanding my enterprise
+            platform capabilities. This full-stack perspective lets me craft
+            components that are not only visually engaging but also easy to
+            extend, test, and maintain—future-proofing our codebase. By
+            collaborating closely with designers, product managers, and fellow
+            engineers, I push the boundaries of user-centred design, performance
+            budgets, and reusable architecture—making the web faster, more
+            intuitive, and ready for the next feature before it's even imagined.
+          </p>
         </div>
-
-        <p className="text-lg mb-6">
-          I’m Mahmod Attar, a passionate Software Engineer currently based in
-          Nieuwegein, Utrecht, Netherlands {getIcon('netherlands')}. With a
-          solid Computer Science foundation from Benha University—reinforced by
-          specialized diplomas—I architect web experiences where performance
-          meets polish. Recently relocated, I bring fresh perspective and
-          adaptability to every project. As a Senior Front-End Developer at
-          Velents, I lead the delivery of high-impact features with Vue.js,
-          Nuxt.js, React, and Next.js, optimizing every byte for speed,
-          accessibility, and seamless mobile use. While my core expertise is
-          front end, I’m equally comfortable shifting to the server side. I
-          build and integrate Node.js + Express services, design efficient
-          RESTful APIs, and work with MongoDB (and PostgreSQL when needed) to
-          ensure data flows reliably and securely. This full-stack perspective
-          lets me craft components that are not only visually engaging but also
-          easy to extend, test, and maintain—future-proofing our codebase. By
-          collaborating closely with designers, product managers, and fellow
-          engineers, I push the boundaries of user-centred design, performance
-          budgets, and reusable architecture—making the web faster, more
-          intuitive, and ready for the next feature before it’s even imagined.
-        </p>
 
         <div className="space-y-2 mb-6">
           <p className="flex items-center gap-2">
             <strong>Working at </strong>
             <span className="flex items-center gap-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <img src={VelentsLogo} alt="Velents Logo" className="w-4 h-4" />
               <a
-                className="hover:text-yellow-300 hover:underline"
-                href="https://velents.ai/"
+                className="text-red-400 underline flex items-center gap-1"
+                href="https://www.netways.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Velents
+                Netways
+                <img
+                  src="https://www.netways.com/img/favicon.ico"
+                  alt="Netways Logo"
+                  className="w-6 h-6"
+                />
               </a>
             </span>
           </p>
@@ -134,7 +143,18 @@ const Profile = () => {
               <span className="text-red-400">{getIcon('Node.js')}</span> Node.js
             </span>
             <span className="flex items-center gap-1">
+              <span className="text-red-500">{getIcon('Nest.js')}</span> Nest.js
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-blue-500">{getIcon('PostgreSQL')}</span>{' '}
+              PostgreSQL
+            </span>
+            <span className="flex items-center gap-1">
               <span className="text-red-400">{getIcon('MongoDB')}</span> MongoDB
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-blue-400">{getIcon('Liferay')}</span>{' '}
+              Liferay
             </span>
           </p>
 
@@ -166,18 +186,21 @@ const Profile = () => {
         <div className="mb-2">
           <p className="text-wrap">
             I'm a senior front-end developer with a BSc and a postgraduate
-            diploma in Computer Science, and over 5 years of experience crafting
+            diploma in Computer Science, and over{' '}
+            {new Date().getFullYear() - 2020} years of experience crafting
             scalable, accessible, and performance-optimized web applications. At{' '}
             <Link
-              className="text-yellow-300 hover:underline hover:scale-105 transition-all duration-300"
-              href="https://velents.ai/"
+              className="text-red-400 hover:underline hover:scale-105 transition-all duration-300"
+              href="https://www.netways.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Velents,
+              Netways,
             </Link>{' '}
-            I've contributed to AI-powered platforms using React, Nuxt, Next.js,
-            and TypeScript. You can find my{' '}
+            I lead development teams working on enterprise solutions,
+            integrating React, Vue.js, Next.js, and Nuxt.js with .NET
+            applications. I help teams improve delivery speed and performance
+            while maintaining high code quality standards. You can find my{' '}
             <Link
               to="/projects"
               className="text-blue-400 underline hover:text-blue-300"
@@ -271,8 +294,9 @@ const Profile = () => {
             </a>
 
             <a
-              href="https://europa.eu/europass/eportfolio/screen/share/7b88c04d-2ec7-4f4e-8645-89fd4567e53e?lang=en"
+              href={import.meta.env.VITE_EUROPA_PASSPORT_URL}
               target="_blank"
+              rel="noopener noreferrer"
               title="preview CV"
               className="flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity"
             >

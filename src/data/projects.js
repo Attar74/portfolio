@@ -3,6 +3,26 @@ import HectarLogo from '../assets/hectar-logo.png';
 import VelentsLogo from '../assets/velents-logo.png';
 const projects = [
   {
+    id: 'safha-ai',
+    title: 'Safha AI',
+    description:
+      'An advanced AI-powered document-processing system that uses AI to understand context, extract structured data, and automate complex workflows. The platform ensures full compliance with business rules, supports multilingual processing—including native Arabic understanding and generation—and integrates seamlessly with enterprise systems. Key capabilities include intelligent document classification, context-aware data extraction, automated validation, and dynamic workflow generation. Designed for high accuracy, scalability, and security, the solution reduces manual effort, accelerates processing time, and delivers consistent, compliant documents across large organizations.',
+    technologies: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'REST APIs',
+      'AI/ML',
+    ],
+    imageUrl: '/images/safha.jpeg',
+    githubUrl: null,
+    featured: true,
+    link: 'https://platform.safha-ai.com/en/dashboard/home',
+    companyLink: 'https://www.netways.com/',
+    companyLogo: VelentsLogo,
+  },
+  {
     id: 'agent-hub',
     title: 'Agent Hub',
     description:

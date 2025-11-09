@@ -15,8 +15,10 @@ import {
 } from 'react-icons/fa';
 import {
   SiGoogletagmanager,
+  SiNestjs,
   SiNextdotjs,
   SiNuxtdotjs,
+  SiPostgresql,
   SiTailwindcss,
   SiTypescript,
   SiWebrtc,
@@ -89,8 +91,20 @@ export const useIcons = () => {
         case 'node.js':
         case 'nodejs':
           return <FaNode />;
+        case 'nest.js':
+        case 'nestjs':
+        case 'nest':
+          return <SiNestjs />;
+        case 'postgresql':
+        case 'postgres':
+          return <SiPostgresql />;
+        case 'liferay':
+          return <FaServer />;
         case 'netherlands':
           return <span className="text-lg">🇳🇱</span>;
+        case 'egypt':
+        case 'cairo':
+          return <span className="text-lg">🇪🇬</span>;
         default:
           return null;
       }

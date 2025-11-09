@@ -292,8 +292,9 @@ const Navbar = () => {
             </a>
 
             <a
-              href="https://europa.eu/europass/eportfolio/screen/share/7b88c04d-2ec7-4f4e-8645-89fd4567e53e?lang=en"
+              href={import.meta.env.VITE_EUROPA_PASSPORT_URL}
               target="_blank"
+              rel="noopener noreferrer"
               title="preview CV"
               className="hidden md:inline cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"
             >
