@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Avatar from '../assets/avatar.png';
 import { useIcons } from '../hooks/useIcons.jsx';
@@ -69,31 +69,31 @@ const Profile = () => {
             </div>
           </div>
           <p className="text-lg">
-            I'm Mahmod Attar, a passionate Senior Software Developer currently based in
-            Cairo, Egypt {getIcon('egypt')}. With a solid Computer Science
-            foundation from Benha University—reinforced by specialized
-            diplomas—I architect scalable, full-stack web applications where performance meets polish.
-            As a Senior Software Developer at Netways, I lead development teams to deliver
-            enterprise-grade solutions, working across the entire stack from React and Vue.js frontends
-            to robust NestJS backends with PostgreSQL and MongoDB databases.
-            
-            My expertise spans modern frontend frameworks (React, Vue.js, Next.js, Nuxt.js)
-            and enterprise backend architecture with NestJS, where I design production-ready
-            RESTful APIs, implement secure authentication systems with JWT and RBAC,
-            and architect multi-tenant applications using Prisma ORM with PostgreSQL.
-            I help development teams accelerate delivery while maintaining exceptional
-            performance, security, and code quality standards.
-            
-            On the backend, I specialize in building scalable NestJS microservices with clean
-            architecture patterns, implementing role-based access control, designing database
-            schemas with Prisma, and ensuring type safety across the entire application.
-            I integrate these modern backend services seamlessly with frontend applications
-            and .NET systems, creating cohesive full-stack solutions.
-            
-            This comprehensive full-stack perspective allows me to design systems that are
-            not only performant and secure but also maintainable and ready for scale.
-            By collaborating with designers, product managers, and engineers, I create
-            end-to-end solutions that push the boundaries of what's possible on the web.
+            I'm Mahmod Attar, a passionate Senior Software Developer currently
+            based in Cairo, Egypt {getIcon('egypt')}. With a solid Computer
+            Science foundation from Benha University—reinforced by specialized
+            diplomas—I architect scalable, full-stack web applications where
+            performance meets polish. As a Senior Software Developer at Netways,
+            I lead development teams to deliver enterprise-grade solutions,
+            working across the entire stack from React and Vue.js frontends to
+            robust NestJS backends with PostgreSQL and MongoDB databases. My
+            expertise spans modern frontend frameworks (React, Vue.js, Next.js,
+            Nuxt.js) and enterprise backend architecture with NestJS, where I
+            design production-ready RESTful APIs, implement secure
+            authentication systems with JWT and RBAC, and architect multi-tenant
+            applications using Prisma ORM with PostgreSQL. I help development
+            teams accelerate delivery while maintaining exceptional performance,
+            security, and code quality standards. On the backend, I specialize
+            in building scalable NestJS microservices with clean architecture
+            patterns, implementing role-based access control, designing database
+            schemas with Prisma, and ensuring type safety across the entire
+            application. I integrate these modern backend services seamlessly
+            with frontend applications and .NET systems, creating cohesive
+            full-stack solutions. This comprehensive full-stack perspective
+            allows me to design systems that are not only performant and secure
+            but also maintainable and ready for scale. By collaborating with
+            designers, product managers, and engineers, I create end-to-end
+            solutions that push the boundaries of what's possible on the web.
           </p>
         </div>
 
@@ -198,11 +198,12 @@ const Profile = () => {
             >
               Netways,
             </Link>{' '}
-            I lead development teams working on enterprise solutions across the entire stack—
-            from React and Vue.js frontends to NestJS backends with PostgreSQL and MongoDB.
-            I architect scalable systems with clean code practices, implement secure authentication
-            and authorization (JWT, RBAC), and ensure high performance and maintainability.
-            You can find my{' '}
+            I lead development teams working on enterprise solutions across the
+            entire stack— from React and Vue.js frontends to NestJS backends
+            with PostgreSQL and MongoDB. I architect scalable systems with clean
+            code practices, implement secure authentication and authorization
+            (JWT, RBAC), and ensure high performance and maintainability. You
+            can find my{' '}
             <Link
               to="/projects"
               className="text-blue-400 underline hover:text-blue-300"
@@ -210,9 +211,10 @@ const Profile = () => {
             >
               featured projects here
             </Link>
-            , including the <em>Enterprise Workflow Engine</em>—a production-grade
-            project management platform built with NestJS, Prisma, and PostgreSQL,
-            demonstrating advanced backend architecture patterns.
+            , including the <em>Enterprise Workflow Engine</em>—a
+            production-grade project management platform built with NestJS,
+            Prisma, and PostgreSQL, demonstrating advanced backend architecture
+            patterns.
           </p>
         </div>
 
