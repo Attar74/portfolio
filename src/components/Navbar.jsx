@@ -292,7 +292,7 @@ const Navbar = () => {
             </a>
 
             <a
-              href={import.meta.env.VITE_EUROPA_PASSPORT_URL}
+              href="https://flowcv.com/resume/1pqsm5ah4bet"
               target="_blank"
               rel="noopener noreferrer"
               title="preview CV"

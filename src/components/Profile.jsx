@@ -69,30 +69,31 @@ const Profile = () => {
             </div>
           </div>
           <p className="text-lg">
-            I'm Mahmod Attar, a passionate Software Engineer currently based in
+            I'm Mahmod Attar, a passionate Senior Software Developer currently based in
             Cairo, Egypt {getIcon('egypt')}. With a solid Computer Science
             foundation from Benha University—reinforced by specialized
-            diplomas—I architect web experiences where performance meets polish.
-            As a Senior Front-End Developer at Netways, I work primarily with
-            enterprise clients, leading teams of developers to deliver
-            high-impact solutions. I specialize in React, Vue.js, Next.js, and
-            Nuxt.js, with extensive experience integrating these modern
-            front-end frameworks with .NET applications. My focus is on helping
-            development teams accelerate delivery times while maintaining
-            exceptional performance standards. I guide developers through best
-            practices, optimize workflows, and ensure seamless integration
-            between front-end and backend systems. While my core expertise is
-            front end, I've strengthened my backend skills significantly. I
-            build and integrate Nest.js services, design efficient RESTful APIs,
-            and work with PostgreSQL to ensure data flows reliably and securely.
-            I've also started working with Liferay, expanding my enterprise
-            platform capabilities. This full-stack perspective lets me craft
-            components that are not only visually engaging but also easy to
-            extend, test, and maintain—future-proofing our codebase. By
-            collaborating closely with designers, product managers, and fellow
-            engineers, I push the boundaries of user-centred design, performance
-            budgets, and reusable architecture—making the web faster, more
-            intuitive, and ready for the next feature before it's even imagined.
+            diplomas—I architect scalable, full-stack web applications where performance meets polish.
+            As a Senior Software Developer at Netways, I lead development teams to deliver
+            enterprise-grade solutions, working across the entire stack from React and Vue.js frontends
+            to robust NestJS backends with PostgreSQL and MongoDB databases.
+            
+            My expertise spans modern frontend frameworks (React, Vue.js, Next.js, Nuxt.js)
+            and enterprise backend architecture with NestJS, where I design production-ready
+            RESTful APIs, implement secure authentication systems with JWT and RBAC,
+            and architect multi-tenant applications using Prisma ORM with PostgreSQL.
+            I help development teams accelerate delivery while maintaining exceptional
+            performance, security, and code quality standards.
+            
+            On the backend, I specialize in building scalable NestJS microservices with clean
+            architecture patterns, implementing role-based access control, designing database
+            schemas with Prisma, and ensuring type safety across the entire application.
+            I integrate these modern backend services seamlessly with frontend applications
+            and .NET systems, creating cohesive full-stack solutions.
+            
+            This comprehensive full-stack perspective allows me to design systems that are
+            not only performant and secure but also maintainable and ready for scale.
+            By collaborating with designers, product managers, and engineers, I create
+            end-to-end solutions that push the boundaries of what's possible on the web.
           </p>
         </div>
 
@@ -185,10 +186,10 @@ const Profile = () => {
 
         <div className="mb-2">
           <p className="text-wrap">
-            I'm a senior front-end developer with a BSc and a postgraduate
+            I'm a Senior Software Developer with a BSc and a postgraduate
             diploma in Computer Science, and over{' '}
-            {new Date().getFullYear() - 2020} years of experience crafting
-            scalable, accessible, and performance-optimized web applications. At{' '}
+            {new Date().getFullYear() - 2020} years of experience building
+            production-grade, full-stack web applications. At{' '}
             <Link
               className="text-red-400 hover:underline hover:scale-105 transition-all duration-300"
               href="https://www.netways.com/"
@@ -197,10 +198,11 @@ const Profile = () => {
             >
               Netways,
             </Link>{' '}
-            I lead development teams working on enterprise solutions,
-            integrating React, Vue.js, Next.js, and Nuxt.js with .NET
-            applications. I help teams improve delivery speed and performance
-            while maintaining high code quality standards. You can find my{' '}
+            I lead development teams working on enterprise solutions across the entire stack—
+            from React and Vue.js frontends to NestJS backends with PostgreSQL and MongoDB.
+            I architect scalable systems with clean code practices, implement secure authentication
+            and authorization (JWT, RBAC), and ensure high performance and maintainability.
+            You can find my{' '}
             <Link
               to="/projects"
               className="text-blue-400 underline hover:text-blue-300"
@@ -208,8 +210,9 @@ const Profile = () => {
             >
               featured projects here
             </Link>
-            , including <em>AudioCloud</em> — a platform for uploading and
-            streaming audio content.
+            , including the <em>Enterprise Workflow Engine</em>—a production-grade
+            project management platform built with NestJS, Prisma, and PostgreSQL,
+            demonstrating advanced backend architecture patterns.
           </p>
         </div>
 
@@ -294,7 +297,7 @@ const Profile = () => {
             </a>
 
             <a
-              href={import.meta.env.VITE_EUROPA_PASSPORT_URL}
+              href="https://flowcv.com/resume/1pqsm5ah4bet"
               target="_blank"
               rel="noopener noreferrer"
               title="preview CV"

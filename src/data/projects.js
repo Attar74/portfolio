@@ -3,6 +3,28 @@ import HectarLogo from '../assets/hectar-logo.png';
 import VelentsLogo from '../assets/velents-logo.png';
 const projects = [
   {
+    id: 'enterprise-workflow-engine',
+    title: 'Enterprise Workflow Engine',
+    description:
+      'A production-grade Team Project Management Platform built with NestJS, PostgreSQL, and Prisma. This enterprise application demonstrates modern backend architecture patterns with multi-tenant organizations, role-based access control (RBAC), JWT authentication with refresh tokens, and a comprehensive user management system. Features include: secure authentication system, 5-tier role hierarchy (SUPER_ADMIN to GUEST), flexible permission system, type-safe database operations with Prisma, global exception handling, structured logging, and health check endpoints for production monitoring. Built following NestJS best practices with full TypeScript support, input validation, and security-first design.',
+    technologies: [
+      'NestJS',
+      'TypeScript',
+      'PostgreSQL',
+      'Prisma',
+      'JWT',
+      'RBAC',
+      'REST APIs',
+      'Passport.js',
+    ],
+    imageUrl: '/images/workflow-engine.png',
+    githubUrl: 'https://github.com/Attar74/enterprise-workflow-engine',
+    featured: true,
+    link: null,
+    companyLink: 'https://www.linkedin.com/in/attar74',
+    companyLogo: AvaLogo,
+  },
+  {
     id: 'safha-ai',
     title: 'Safha AI',
     description:
