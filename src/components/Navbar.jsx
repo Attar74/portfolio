@@ -157,6 +157,19 @@ const Navbar = () => {
               <span className="md:inline">Projects</span>
             </Link>
 
+            <Link
+              to="/blog"
+              title="Blog"
+              className={`font-bold cursor-pointer no-underline text-inherit transition-opacity duration-200 outline-none m-auto ${
+                location.pathname === `/blog` ||
+                location.pathname.startsWith('/blog/')
+                  ? 'text-[#fff] opacity-100'
+                  : 'opacity-60 hover:opacity-100'
+              }`}
+            >
+              <span className="md:inline">Blog</span>
+            </Link>
+
             {/*<Link
               to="/talks"
               className="font-bold cursor-pointer no-underline text-inherit transition-opacity duration-200 opacity-60 hover:opacity-100 outline-none m-auto"

@@ -7,7 +7,7 @@ const CurrentFocus = () => {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <div className="py-12 px-12 xl:px-0 overflow-y-auto no-scrollbar">
+    <div className="py-12 px-12 xl:px-0 min-h-screen">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
         <div className="my-10">
           <h2 className="text-4xl font-bold text-white">Current Focus</h2>
