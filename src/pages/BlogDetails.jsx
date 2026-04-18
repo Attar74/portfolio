@@ -39,7 +39,7 @@ const BlogDetails = () => {
   }
 
   return (
-    <div className="mt-24 py-12 px-6 md:px-12 xl:px-0 w-full max-w-4xl mx-auto min-h-screen">
+    <div className="mt-[5rem] py-12 px-6 md:px-12 xl:px-0 w-full max-w-4xl mx-auto min-h-screen">
       {/* Back button */}
       <Link
         to="/blog"

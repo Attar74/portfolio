@@ -3,7 +3,7 @@ import blogs from '../data/blogs';
 
 const Blog = () => {
   return (
-    <div className="mt-24 py-12 px-6 md:px-12 xl:px-0 w-full min-h-screen">
+    <div className="mt-[5rem] py-12 px-6 md:px-12 xl:px-0 w-full min-h-screen">
       <div className="mb-12">
         <h1 className="text-5xl font-bold text-white mb-4">Blog</h1>
         <div className="w-20 h-1 bg-blue-600 mb-4"></div>
