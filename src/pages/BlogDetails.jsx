@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import blogs from '../data/blogs';
@@ -5,6 +6,15 @@ import blogs from '../data/blogs';
 const BlogDetails = () => {
   const { id } = useParams();
   const blog = blogs.find((b) => b.id === id);
+  const currentIndex = blogs.findIndex((b) => b.id === id);
+  const nextBlog = currentIndex !== -1 && currentIndex < blogs.length - 1 
+    ? blogs[currentIndex + 1] 
+    : null;
+
+  // Scroll to top when blog post changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [id]);
 
   if (!blog) {
     return (
@@ -132,6 +142,64 @@ const BlogDetails = () => {
         <div className="prose prose-invert prose-lg max-w-none">
           <MarkdownRenderer content={blog.content || blog.description} />
         </div>
+
+        {/* Next Blog Post Section */}
+        {nextBlog && (
+          <div className="mt-12 pt-8 border-t border-gray-700">
+            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-blue-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+              What's Next?
+            </h3>
+            <Link
+              to={`/blog/${nextBlog.id}`}
+              className="block group bg-gray-700/30 hover:bg-gray-700/50 rounded-lg p-6 border border-gray-600/50 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <div className="text-sm text-blue-400 mb-2">Next Post</div>
+                  <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                    {nextBlog.title}
+                  </h4>
+                  <p className="text-gray-400 line-clamp-2">
+                    {nextBlog.description}
+                  </p>
+                  {nextBlog.readTime && (
+                    <div className="text-sm text-gray-500 mt-3">
+                      {nextBlog.readTime}
+                    </div>
+                  )}
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </Link>
+          </div>
+        )}
       </article>
     </div>
   );

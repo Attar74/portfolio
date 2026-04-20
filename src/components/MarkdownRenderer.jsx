@@ -167,7 +167,7 @@ const MarkdownRenderer = ({ content }) => {
       parts.push({ type: 'text', content: text.slice(lastIndex) });
     }
 
-    // Process each part for bold formatting
+    // Process each part for links and bold formatting
     parts.forEach((part, index) => {
       if (part.type === 'code') {
         elements.push(
@@ -179,31 +179,83 @@ const MarkdownRenderer = ({ content }) => {
           </code>,
         );
       } else {
-        const boldRegex = /\*\*(.+?)\*\*/g;
-        let boldMatch;
-        let boldLastIndex = 0;
-        const textParts = [];
+        // Process links first
+        const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+        let linkMatch;
+        let linkLastIndex = 0;
+        const linkParts = [];
 
-        while ((boldMatch = boldRegex.exec(part.content)) !== null) {
-          if (boldMatch.index > boldLastIndex) {
-            textParts.push(part.content.slice(boldLastIndex, boldMatch.index));
+        while ((linkMatch = linkRegex.exec(part.content)) !== null) {
+          if (linkMatch.index > linkLastIndex) {
+            linkParts.push({
+              type: 'text',
+              content: part.content.slice(linkLastIndex, linkMatch.index),
+            });
           }
-          textParts.push(
-            <strong
-              key={`bold-${index}-${boldMatch.index}`}
-              className="font-bold text-white"
-            >
-              {boldMatch[1]}
-            </strong>,
-          );
-          boldLastIndex = boldMatch.index + boldMatch[0].length;
+          linkParts.push({
+            type: 'link',
+            text: linkMatch[1],
+            url: linkMatch[2],
+          });
+          linkLastIndex = linkMatch.index + linkMatch[0].length;
         }
 
-        if (boldLastIndex < part.content.length) {
-          textParts.push(part.content.slice(boldLastIndex));
+        if (linkLastIndex < part.content.length) {
+          linkParts.push({
+            type: 'text',
+            content: part.content.slice(linkLastIndex),
+          });
         }
 
-        elements.push(...textParts);
+        // If no links found, add the whole content as text
+        if (linkParts.length === 0) {
+          linkParts.push({ type: 'text', content: part.content });
+        }
+
+        // Process each link part for bold formatting
+        linkParts.forEach((linkPart, linkIndex) => {
+          if (linkPart.type === 'link') {
+            elements.push(
+              <a
+                key={`link-${index}-${linkIndex}`}
+                href={linkPart.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 underline transition-colors"
+              >
+                {linkPart.text}
+              </a>,
+            );
+          } else {
+            const boldRegex = /\*\*(.+?)\*\*/g;
+            let boldMatch;
+            let boldLastIndex = 0;
+            const textParts = [];
+
+            while ((boldMatch = boldRegex.exec(linkPart.content)) !== null) {
+              if (boldMatch.index > boldLastIndex) {
+                textParts.push(
+                  linkPart.content.slice(boldLastIndex, boldMatch.index),
+                );
+              }
+              textParts.push(
+                <strong
+                  key={`bold-${index}-${linkIndex}-${boldMatch.index}`}
+                  className="font-bold text-white"
+                >
+                  {boldMatch[1]}
+                </strong>,
+              );
+              boldLastIndex = boldMatch.index + boldMatch[0].length;
+            }
+
+            if (boldLastIndex < linkPart.content.length) {
+              textParts.push(linkPart.content.slice(boldLastIndex));
+            }
+
+            elements.push(...textParts);
+          }
+        });
       }
     });
 
