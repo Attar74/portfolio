@@ -1,6 +1,6 @@
 import CodeBlock from './CodeBlock';
 
-const MarkdownRenderer = ({ content }) => {
+const MarkdownRenderer = ({ content, generateSlug }) => {
   // Parse markdown content and render with proper formatting
   const parseContent = (text) => {
     const elements = [];
@@ -91,10 +91,22 @@ const MarkdownRenderer = ({ content }) => {
           5: 'text-lg md:text-xl font-semibold mb-2 mt-4',
           6: 'text-base md:text-lg font-semibold mb-2 mt-3',
         };
+        
+        // Generate ID for heading if generateSlug function is provided
+        const headingId = generateSlug
+          ? generateSlug(
+              text
+                .replace(/\*\*(.+?)\*\*/g, '$1')
+                .replace(/`([^`]+)`/g, '$1')
+                .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+            )
+          : undefined;
+        
         elements.push(
           <HeadingTag
             key={index}
-            className={`text-white ${sizeClasses[level]}`}
+            id={headingId}
+            className={`text-white ${sizeClasses[level]} scroll-mt-24`}
           >
             {renderInlineFormatting(text)}
           </HeadingTag>,
